@@ -3,3 +3,7 @@ allow mm-qcamerad camera_device:chr_file { ioctl open read write };
 allow mm-qcamerad system_file:file execmod;
 allow mm-qcamerad system_data_file:dir { add_name remove_name write };
 allow mm-qcamerad system_data_file:sock_file unlink;
+allow mm-qcamerad mpctl_socket:dir r_dir_perms;
+allow mm-qcamerad system_data_file:file open;
+
+allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
