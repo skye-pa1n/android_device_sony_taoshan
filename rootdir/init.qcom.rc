@@ -70,7 +70,13 @@ on post-fs-data
     mkdir /tombstones/mdm 0771 system system
     mkdir /tombstones/mdm2 0771 system system
     mkdir /data/smime 0770 root smime_keystore
-
+    
+    # Create the directories used by the Wireless subsystem
+    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi/sockets 0770 wifi wifi
+    mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
+    
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
 
