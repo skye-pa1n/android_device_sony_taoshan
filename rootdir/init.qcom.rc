@@ -121,7 +121,6 @@ on boot
     write /sys/module/subsystem_restart/parameters/restart_level 1
     write /sys/module/subsystem_restart/parameters/max_restarts 8
     write /sys/module/subsystem_restart/parameters/max_history_time 3600
-
     mkdir /data/misc/wifi/prima 0775 wifi wifi
 
     # Wifi firmware reload path
