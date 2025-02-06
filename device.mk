@@ -36,6 +36,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit common Android Go configurations
 $(call inherit-product, build/target/product/go_defaults.mk)
 
+# Call some extra configs picked from Team-NoobMaster69
+$(call inherit-product, device/extras/memory/product.mk)
+
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk
 
