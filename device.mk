@@ -35,6 +35,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit Android Go & Team-NoobMaster69 configurations
 $(call inherit-product, build/target/product/go_defaults_512.mk)
+$(call inherit-product, device/extras/RemovePackages/config.mk)
 
 # Call some extra configs picked from Team-NoobMaster69
 #$(call inherit-product, device/extras/memory/product.mk)
