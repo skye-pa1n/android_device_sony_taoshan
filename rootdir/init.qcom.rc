@@ -52,6 +52,7 @@ on fs
     
     # Start HW service manager early
     start hwservicemanager
+
 on late-fs
     # Start services for bootanim
     start surfaceflinger
@@ -59,10 +60,11 @@ on late-fs
     start configstore-hal-1-0
     start gralloc-2-0
     mount_all fstab.qcom --late
-
-
+    
 on post-fs
     mkdir /dev/socket/suntory 0755 system system
+    # Allow writing to the kernel trace log.
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
 
 on post-fs-data
     # Create the directories used by the Wireless subsystem
