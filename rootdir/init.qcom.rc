@@ -44,22 +44,11 @@ on init
     start adbd
 
 on fs
-    mount_all fstab.qcom --early
+    mount_all fstab.qcom
 
     chmod 0750 /ftma/cci-flex.sh
     chmod 0750 /ftma/custom-flex.sh
     setprop sys.usb.ffs.aio_compat 1
-    
-    # Start HW service manager early
-    start hwservicemanager
-
-on late-fs
-    # Start services for bootanim
-    start vendor.configstore-hal
-    start surfaceflinger
-    start bootanim
-    start vendor.gralloc-2-0
-    mount_all fstab.qcom --late
     
 on post-fs
     mkdir /dev/socket/suntory 0755 system system
