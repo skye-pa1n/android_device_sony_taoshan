@@ -115,6 +115,10 @@ on post-fs-data
     chown system /dev/block/platform/msm_sdcc.1/by-name
 
     setprop vold.post_fs_data_done 1
+    
+    # Wait a moment so services start up properly
+    exec u:root g:root -- /system/bin/sh -c "sleep 5; logcat -d > /cache/logcat.txt; dmesg > /cache/dmesg.txt; echo 'Logs dumped from init.rc' > /cache/bootanim_debug.txt"
+
     setprop sys.usb.config ${persist.sys.usb.config}
 
 on early-boot
