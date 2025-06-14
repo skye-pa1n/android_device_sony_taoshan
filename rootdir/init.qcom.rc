@@ -35,20 +35,13 @@ on init
 
     write /sys/block/zram0/comp_algorithm lz4
     write /proc/sys/vm/page-cluster 0
-    write /sys/class/android_usb/android0/idVendor 0fce
-    write /sys/class/android_usb/android0/idProduct 619b
-    write /sys/class/android_usb/android0/functions mass_storage,adb
-    write /sys/class/android_usb/f_mass_storage/serial_number ${ro.serialno}
-    write /sys/class/android_usb/f_mass_storage/eui64_id 000AD90000000000
-    write /sys/class/android_usb/android0/enable 1
-    start adbd
+    setprop sys.usb.ffs.aio_compat 1
 
 on fs
     mount_all fstab.qcom
-
+    exec u:root g:root -- /system/bin/sh -c "sleep 10; logcat -d > /cache/logcat.txt; dmesg > /cache/dmesg.txt; echo 'Logs dumped from init.rc' > /cache/bootanim_debug.txt"
     chmod 0750 /ftma/cci-flex.sh
     chmod 0750 /ftma/custom-flex.sh
-    setprop sys.usb.ffs.aio_compat 1
     
 on post-fs
     mkdir /dev/socket/suntory 0755 system system
@@ -90,10 +83,6 @@ on post-fs-data
     chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.4/polling
 
-    # keep the CPU clock active
-    chmod 0777 /sys/devices/system/cpu/cpu0/cpuidle/state0/disable
-    write /sys/devices/system/cpu/cpu0/cpuidle/state0/disable 1
-
     # Chown polling nodes as needed from UI running on system server
     chown system system /sys/devices/platform/msm_sdcc.1/polling
     chown system system /sys/devices/platform/msm_sdcc.2/polling
@@ -115,9 +104,6 @@ on post-fs-data
     chown system /dev/block/platform/msm_sdcc.1/by-name
 
     setprop vold.post_fs_data_done 1
-    
-    # Wait a moment so services start up properly
-    exec u:root g:root -- /system/bin/sh -c "sleep 5; logcat -d > /cache/logcat.txt; dmesg > /cache/dmesg.txt; echo 'Logs dumped from init.rc' > /cache/bootanim_debug.txt"
 
     setprop sys.usb.config ${persist.sys.usb.config}
 
