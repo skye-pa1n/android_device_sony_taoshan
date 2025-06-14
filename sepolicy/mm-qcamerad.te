@@ -7,3 +7,4 @@ allow mm-qcamerad mpctl_socket:dir r_dir_perms;
 allow mm-qcamerad system_data_file:file open;
 
 allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
+type sysfs_camera_torch, fs_type, sysfs_type;
