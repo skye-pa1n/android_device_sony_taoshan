@@ -26,15 +26,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=adb,mtp \
-    persist.service.adb.enable=1 \
-    service.adb.root=1 \
-    persist.adb.notify=0 \
     ro.adb.secure=0 \
     ro.secure=0 \
     ro.debuggable=1
-
-PRODUCT_PACKAGES += \
-    init_sony
 
 # Product common configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)

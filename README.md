@@ -1,5 +1,5 @@
 Copyright 2015 - The CyanogenMod Project  
-Copyright 2017-25 - The LineageOS Project  
+Copyright 2017-18 - The LineageOS Project  
 
 Sony Xperia L
 ==============
@@ -21,5 +21,4 @@ Camera  | 8MPx, LED Flash
 
 ![Sony Xperia L](http://cdn2.gsmarena.com/vv/pics/sony/sony-xperia-l-01.jpg "Sony Xperia L in black")
 
-This branch is for building LineageOS 16.0 (or Android Pie 9.0 AOSP based) ROMS.
-This is a experimental branch, expect very critical issues.
+This branch is for building LineageOS 15.1 (or Android Oreo 8.1 AOSP based) ROMS.

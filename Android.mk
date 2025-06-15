@@ -19,7 +19,6 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(BOARD_VENDOR_PLATFORM),taoshan)
 
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
-include $(LOCAL_PATH)/init_sony/Android.mk
 
 $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wcd9310; \
     ln -sf /data/misc/audio/wcd9310_anc.bin \

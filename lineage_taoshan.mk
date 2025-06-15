@@ -32,6 +32,9 @@ PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia L
 
+# Init a dummy BT MAC address, will be overwritten later
+BOARD_BT_MAC_ADDR := "00:00:00:00:00:00"
+
 # Build fingerprints
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=C2105 \
