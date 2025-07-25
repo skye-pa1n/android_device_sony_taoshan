@@ -23,7 +23,7 @@ PRODUCT_AAPT_PREBUILT_DPI := hdpi tvdpi mdpi ldpi
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-
+    
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=adb,mtp \
     ro.adb.secure=0 \
