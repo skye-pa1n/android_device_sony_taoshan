@@ -1,3 +1,6 @@
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 14
+
 # Ramdisk configurations
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
