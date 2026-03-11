@@ -6,7 +6,6 @@ PRODUCT_COPY_FILES += \
 # Camera HIDL interfaces
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-legacy
-    
 
 # Disable camera Treble path
 PRODUCT_PROPERTY_OVERRIDES += \
