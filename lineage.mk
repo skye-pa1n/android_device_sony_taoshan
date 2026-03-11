@@ -18,6 +18,10 @@
 # Inherit common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
 
+
+# Inherit common Android Go configurations
+$(call inherit-product, build/target/product/go_defaults.mk)
+
 # Inherit device configurations
 $(call inherit-product, device/sony/taoshan/device.mk)
 
