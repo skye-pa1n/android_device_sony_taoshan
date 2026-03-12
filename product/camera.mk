@@ -1,6 +1,6 @@
 # Camera packages
 PRODUCT_PACKAGES += \
-    camera.msm8960 \
+    camera.qcom \
     Snap
 
 # Camera SHIM packages
