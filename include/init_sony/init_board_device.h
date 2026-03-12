@@ -34,7 +34,7 @@ public:
         vibrate(100);
 
         // LED boot selection colors
-        led_color(0, 255, 255);
+        led_color(0, 255, 255); // cyan
     }
 
     // Board: introduction for Recovery
@@ -45,6 +45,8 @@ public:
 
         // Short vibration
         vibrate(50);
+        // LED recovery colors
+        led_color(255, 0, 255); // magenta
     }
 
     // Board: finish init execution
