@@ -34,7 +34,7 @@ public:
         vibrate(100);
 
         // LED boot selection colors
-        led_color(255, 0, 255);
+        led_color(0, 255, 255);
     }
 
     // Board: introduction for Recovery
