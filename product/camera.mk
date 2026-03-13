@@ -8,7 +8,7 @@ PRODUCT_PACKAGES += \
     libshim_cald \
     libshim_camera
 
-# Camera configurations
+# Camera external configurations
 PRODUCT_COPY_FILES += \
     device/sony/taoshan/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
@@ -26,4 +26,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.stats.test=5 \
     persist.vendor.qti.telephony.vt_cam_interface=1 \
     vidc.enc.dcvs.extra-buff-count=2 \
-    persist.camera.HAL3.enabled=1
+    persist.camera.HAL3.enabled=1 \
+    debug.stagefright.ccodec=0 \
+    debug.stagefright.omx_default_rank.sw-audio=1 \
+    debug.stagefright.omx_default_rank=0 \
+    vendor.mediacodec.binder.size=4 \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
+    ro.camera.enableLazyHal=true

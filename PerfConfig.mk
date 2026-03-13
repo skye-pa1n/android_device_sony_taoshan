@@ -1,7 +1,3 @@
-# Camera
-TARGET_PROVIDES_CAMERA_HAL := true
-USE_DEVICE_SPECIFIC_CAMERA := true
-
 # Legacy hacks
 MALLOC_SVELTE := true
 TARGET_NEEDS_GCC_LIBC := true
