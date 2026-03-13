@@ -1,0 +1,9 @@
+#
+# system.prop for taoshan
+#
+
+# We need fuse since i haven't added sdcardfs to the kernel
+ro.sys.sdcard_fuse=1
+
+# Disable colorfade
+ro.displaypower.colorfade=false
