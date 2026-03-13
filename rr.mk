@@ -15,8 +15,8 @@
 # limitations under the License.
 #
 
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
+# Inherit common RR stuff
+$(call inherit-product, vendor/rr/config/common_mini_phone.mk)
 
 
 # Inherit common Android Go configurations
@@ -31,7 +31,7 @@ TARGET_SCREEN_WIDTH := 480
 
 # Device identifications
 PRODUCT_DEVICE := taoshan
-PRODUCT_NAME := lineage_taoshan
+PRODUCT_NAME := rr_taoshan
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia L
