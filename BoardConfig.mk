@@ -24,5 +24,8 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 include $(DEVICE_PATH)/PlatformConfig.mk
 include $(DEVICE_PATH)/board/*.mk
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Board device vendor
 -include vendor/sony/taoshan/BoardConfigVendor.mk
