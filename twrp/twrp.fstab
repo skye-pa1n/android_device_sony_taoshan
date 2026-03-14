@@ -1,0 +1,10 @@
+# mountpoint      fstype            device                                                                             [options]               
+
+/boot            emmc              /dev/block/platform/msm_sdcc.1/by-name/boot                                 flags=display="Boot";backup=1
+/system          ext4              /dev/block/platform/msm_sdcc.1/by-name/system                               flags=display="System";backup=1;canbewiped;wipeingui
+/cache           ext4              /dev/block/platform/msm_sdcc.1/by-name/cache                                flags=display="Cache";backup=1;canbewiped;wipeingui;wipeduringfactoryreset
+/data            ext4              /dev/block/platform/msm_sdcc.1/by-name/userdata                             flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
+/recovery        emmc              /dev/block/platform/msm_sdcc.1/by-name/FOTAKernel                           flags=display="Recovery";backup=1;canbewiped;wipeingui
+/ta              emmc              /dev/block/platform/msm_sdcc.1/by-name/TA                                   flags=backup=1;display="TrimArea"
+/misc            emmc              /dev/block/platform/msm_sdcc.1/by-name/apps_log
+/external_sd     vfat              /dev/block/mmcblk1p1 /dev/block/mmcblk1                                     flags=backup=0;storage;wipeingui;removable;settingsstorage;encryptable=userdata

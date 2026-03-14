@@ -24,6 +24,13 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 include $(DEVICE_PATH)/PlatformConfig.mk
 include $(DEVICE_PATH)/board/*.mk
 
+# Recovery
+ifeq ($(WITH_TWRP),true)
+include $(DEVICE_PATH)/twrp/twrp.mk
+else
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
+endif
+
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
