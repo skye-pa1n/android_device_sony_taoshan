@@ -18,7 +18,6 @@
 # Inherit common RR stuff
 $(call inherit-product, vendor/rr/config/common_mini_phone.mk)
 
-
 # Inherit common Android Go configurations
 $(call inherit-product, build/target/product/go_defaults.mk)
 
